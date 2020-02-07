@@ -2,7 +2,7 @@ package main
 
 import "net/http"
 
-// User ar.
+// User struct.
 // swagger:model user
 type User struct {
 	// ID of user
@@ -28,9 +28,9 @@ type RequestStruct struct {
   User *User `json:"user"`
 }
 
-// An ResponseStruct response model
+// A ResponseStruct response model.
 //
-// This is used for returning a response with a single user as body
+// This is used for returning a response with a single user as body.
 //
 // swagger:response responseStruct
 type ResponseStruct struct {
@@ -38,7 +38,7 @@ type ResponseStruct struct {
 	Payload *User `json:"user"`
 }
 
-// A ValidationError is a swagger response to represent error
+// A ValidationError is a swagger response to represent error.
 //
 // swagger:response validationError
 type ValidationError struct {
@@ -80,7 +80,7 @@ func GetUsers(w http.ResponseWriter, r *http.Request) {
 // Handler to create a user.
 //
 // Responses:
-//        200: orderResponse
+//        200: responseStruct
 //        422: validationError
 func CreateUser(w http.ResponseWriter, req *http.Request) {
 	// TODO: implement code to create a user. 
