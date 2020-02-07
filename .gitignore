@@ -1,0 +1,5 @@
+# VS Code specific files
+.vscode/
+
+# Generated swagger.json
+swagger.json
